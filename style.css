@@ -1,0 +1,94 @@
+/* Estilos para la simulación de proyectil */
+body {
+    background: linear-gradient(to bottom, #ddeeff, #a0c4ff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+canvas {
+    background: linear-gradient(to bottom, #87CEEB, #b0e0e6);
+    border: 2px solid black;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.input-container {
+    display: inline-block;
+    margin: 5px;
+}
+
+input {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Animación de nubes */
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 30px 10px 20px rgba(255, 255, 255, 0.8), 
+                -30px 10px 20px rgba(255, 255, 255, 0.8), 
+                10px -10px 20px rgba(255, 255, 255, 0.8);
+    animation: moveClouds 20s linear infinite;
+}
+
+@keyframes moveClouds {
+    from { transform: translateX(-200px); }
+    to { transform: translateX(1200px); }
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid green;
+    position: absolute;
+}
+
+.pulsating {
+    animation: pulse 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+canvas {
+    background: url('fondo.jpg') no-repeat center center;
+    background-size: cover;
+    border: 2px solid black;
+}

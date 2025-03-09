@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Proyectil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulación de Proyectil</h1>
+    <div class="controls">
+        <label for="velocidad">Velocidad Inicial (m/s):</label>
+        <input type="number" id="velocidad" value="30" min="1" required>
+
+        <label for="angulo">Ángulo de lanzamiento (°):</label>
+        <input type="number" id="angulo" value="45" min="0" max="90" required>
+
+        <button onclick="iniciarSimulacion()">Lanzar</button>
+
+        <button onclick="nuevoJuego()">Juego nuevo</button>
+    </div>
+
+    <div class="cloud" style="top: 50px; left: 100px;"></div>
+    <div class="cloud" style="top: 100px; left: 300px;"></div>
+    <div class="cloud" style="top: 20px; left: 600px;"></div>
+    <div class="cloud" style="top: 80px; left: 900px;"></div>
+
+    <canvas id="canvas"></canvas>
+    
+    <div id="info"></div>
+    
+    <script src="simulacion.js"></script>
+</body>
+</html>
